@@ -7,28 +7,29 @@ public class Workaround {
         for (int i = 0; i < var.length(); i++) {
             if (var.charAt(i) == '[') {
                 if (flag_open) {
-                    sb.append("[");
+                    sb.append('[');
                 }
                 flag_open = true;
             } else {
                  if (var.charAt(i) == ']') {
                     if (flag_open) {
-                        sb.append("{}");
+                        sb.append('{');
+                        sb.append('}');
                     } else {
-                        sb.append("]");
+                        sb.append(']');
                     };
                  } else if (var.charAt(i) == '\n') {
                     if (flag_open) {
-                        sb.append("[");
+                        sb.append('[');
                     }
                 } else if (var.charAt(i) == '\"') {
                     if (flag_open) {
-                        sb.append("[");
+                        sb.append('[');
                     }
-                    sb.append("\'");
+                    sb.append('\'');
                 } else {
                     if (flag_open) {
-                        sb.append("[");
+                        sb.append('[');
                     }
                     sb.append(var.charAt(i));
                 }
@@ -36,7 +37,7 @@ public class Workaround {
            }
         }
         if (flag_open) {
-            sb.append("[");
+            sb.append('[');
         }
         return sb.toString();
     }
