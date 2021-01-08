@@ -10,17 +10,17 @@
 # Что показало профилирование
 Тестирование выполнялось на OpenJDK11. Результаты такие:
 
-java11-replace-allsubstituted          avgt   1375,647 ±  97,444      ns/op
+java11-replace-allsubstituted          avgt   1321,456 ±   12,509  ns/op
 
-java11-replace-different               avgt   995,523 ±  61,173      ns/op
+java11-replace-different               avgt   977,638 ±   70,506  ns/op
 
-java11-replaceall-allsubstituted       avgt   4394,794 ± 248,485      ns/op
+java11-replaceall-allsubstituted       avgt   4969,148 ± 1058,186  ns/op
 
-java11-replaceall-different            avgt   3619,651 ± 209,997      ns/op
+java11-replaceall-different            avgt   3816,780 ±  683,875  ns/op
 
-java11-replacesbuilder-allsubstituted  avgt   498,574 ±  30,380      ns/op
+java11-replacesbuilder-allsubstituted  avgt   208,242 ±   13,835  ns/op
 
-java11-replacesbuilder-different       avgt   703,331 ±  43,043      ns/op
+java11-replacesbuilder-different       avgt   308,688 ±   19,813  ns/op
 
 
 Тесты, маркированные allsubstituted - показывают случай, где все символы заменяются, different - обычный кейс - что-то заменяется, что-то нет. 
